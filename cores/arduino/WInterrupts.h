@@ -25,6 +25,7 @@
 
 
 void attachInterrupt(uint32_t pin,GPIOMode_TypeDef io_mode, void (*callback)(void), EXTIMode_TypeDef it_mode, EXTITrigger_TypeDef trigger_mode);
+void attachInterrupt(uint32_t pin, void (*callback)(void), uint32_t mode);
 void detachInterrupt(uint32_t pin);
 
 #endif /* _WIRING_INTERRUPTS_ */

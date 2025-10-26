@@ -35,6 +35,29 @@ void attachInterrupt(uint32_t pin, GPIOMode_TypeDef io_mode,  void (*callback)(v
   ch32_interrupt_enable(port, io_mode, CH_GPIO_PIN(p), callback, it_mode, trigger_mode);
 }
 
+void attachInterrupt(uint32_t pin, void (*callback)(void), uint32_t mode)
+{
+  GPIOMode_TypeDef io_mode;
+  EXTITrigger_TypeDef trigger_mode;
+
+  if (mode == RISING)
+  {
+    io_mode = GPIO_Mode_IPD;
+    trigger_mode = EXTI_Trigger_Rising;
+  }
+  else if (mode == FALLING)
+  {
+    io_mode = GPIO_Mode_IPU;
+    trigger_mode = EXTI_Trigger_Falling;
+  }
+  else // CHANGE
+  {
+    io_mode = GPIO_Mode_IN_FLOATING;
+    trigger_mode = EXTI_Trigger_Rising_Falling;
+  }
+
+  attachInterrupt(pin, io_mode, callback, EXTI_Mode_Interrupt, trigger_mode);
+}
 
 void detachInterrupt(uint32_t pin)
 {
