@@ -20,30 +20,45 @@
 #define                         I2C_MODULE_ENABLED
 #define                         TIM_MODULE_ENABLED    
 
-/* CH32V307VCT6 Pins */
-#define PA0                     PIN_A0
-#define PA1                     PIN_A1
-#define PA2                     PIN_A2
-#define PA3                     PIN_A3
-#define PA4                     PIN_A4
-#define PA5                     PIN_A5
+/* CH32V303CBT6 Pins */
+// PA pins
+#define PA0                     0
+#define PA1                     1
+#define PA2                     2
+#define PA3                     3
+#define PA4                     4
+#define PA5                     5
+#define PA6                     6
+#define PA7                     7
+#define PA8                     8
+#define PA9                     9
+#define PA10                    10
+#define PA11                    11
+#define PA12                    12
+#define PA15                    13
 
-#define PA10                    6
-#define PA9                     7
-#define PA8                     8                     
-#define PA7                     9
-#define PA6                     10
-#define PB5                     11 
-#define PB8                     12
-#define PB9                     13
-#define PB1                     14
-#define PB0                     15
-#define PB12                    16
-#define PB15                    17       
-#define PB14                    18
-#define PB13                    19
-#define PB11                    20
-#define PB10                    21 
+// PB pins
+#define PB0                     14
+#define PB1                     15
+#define PB2                     16
+#define PB3                     17
+#define PB4                     18
+#define PB5                     19
+#define PB6                     20
+#define PB7                     21
+#define PB8                     22
+#define PB9                     23
+#define PB10                    24
+#define PB11                    25
+#define PB12                    26
+#define PB13                    27
+#define PB14                    28
+#define PB15                    29
+
+// PC pins
+#define PC13                    30
+#define PC14                    31
+#define PC15                    32 
 
 
 // Alternate pins number

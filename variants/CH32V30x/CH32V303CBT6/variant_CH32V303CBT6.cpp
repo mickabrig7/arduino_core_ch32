@@ -18,29 +18,48 @@
 
 // Digital PinName array
 const PinName digitalPin[] = {
-  PA_0,  //D0/A0
-  PA_1,  //D1/A1
-  PA_2,  //D2/A2
-  PA_3,  //D3/A3
-  PA_4,  //D4/A4    SPI1_NSS
-  PA_5,  //D5/A5    SPI1_SCK
 
-  PA_10,  //D6      USART1_RX
-  PA_9,   //D7      USART1_TX
-  PA_8,   //D8   
-  PA_7,   //D9      SPI_MOSI    TIM8_CH1N  TIM3_CH2  
-  PA_6,   //D10     SPI1_MISO  
-  PB_5,   //D11                 TIM3_CH2_2 TIM10_CH3_1  
-  PB_8,   //D12                 TIM4_CH3 TIM10_CH1 TIM8_CH3_1
-  PB_9,   //D13                  
-  PB_1,   //D14                 TIM3_CH4 TIM8_CH3N TIM1_CH3N_1    TIM3_CH4_2 TIM9_CH2N_1 
-  PB_0,   //D15                 TIM3_CH3 TIM8_CH2N TIM1_CH2N_1    TIM3_CH3_2 TIM9_CH1N_1 
-  PB_12,  //D16    SPI2_NSS
-  PB_15,  //D17    SPI2_MOSI
-  PB_14,  //D18    SPI2_MISO 
-  PB_13,  //D19    SPI2_SCK 
-  PB_11,  //D20    I2C2_SDA
-  PB_10   //D21    I2C2_SCL
+  // --- PORT A ---
+
+  PA_0,   // ADC0, TIM2_CH1, WKUP
+  PA_1,   // ADC1, TIM2_CH2
+  PA_2,   // ADC2, TIM2_CH3, USART2_TX
+  PA_3,   // ADC3, TIM2_CH4, USART2_RX
+  PA_4,   // ADC4, SPI1_NSS, DAC_OUT1
+  PA_5,   // ADC5, SPI1_SCK, DAC_OUT2
+  PA_6,   // ADC6, SPI1_MISO, TIM3_CH1
+  PA_7,   // ADC7, SPI1_MOSI, TIM3_CH2
+  PA_8,   // MCO, TIM1_CH1, USART1_CK
+  PA_9,   // USART1_TX, TIM1_CH2
+  PA_10,  // USART1_RX, TIM1_CH3
+  PA_11,  // USB_DM, CAN_RX
+  PA_12,  // USB_DP, CAN_TX
+  PA_15,  // TIM2_CH1_ETR, SPI1_NSS (remap), JTDI
+
+  // --- PORT B ---
+
+  PB_0,   // ADC8, TIM3_CH3
+  PB_1,   // ADC9, TIM3_CH4
+  PB_2,   // BOOT1
+  PB_3,   // JTDO, SPI1_SCK (remap), TIM2_CH2
+  PB_4,   // NJTRST, SPI1_MISO (remap), TIM3_CH1
+  PB_5,   // SPI1_MOSI (remap), TIM3_CH2
+  PB_6,   // I2C1_SCL, USART1_TX (remap), TIM4_CH1
+  PB_7,   // I2C1_SDA, USART1_RX (remap), TIM4_CH2
+  PB_8,   // TIM4_CH3, I2C1_SCL (remap), CAN_RX
+  PB_9,   // TIM4_CH4, I2C1_SDA (remap), CAN_TX
+  PB_10,  // I2C2_SCL, USART3_TX
+  PB_11,  // I2C2_SDA, USART3_RX
+  PB_12,  // SPI2_NSS, I2C2_SMBA
+  PB_13,  // SPI2_SCK, USART3_CTS
+  PB_14,  // SPI2_MISO, USART3_RTS
+  PB_15,  // SPI2_MOSI
+
+  // --- PORT C ---
+
+  PC_13,  // RTC_TAMPER, GPIO
+  PC_14,  // OSC32_IN (LSE)
+  PC_15   // OSC32_OUT (LSE)
 };
 
 // Analog (Ax) pin number array
