@@ -1,7 +1,9 @@
+__flash_size = DEFINED(__FLASH_SIZE) ? __FLASH_SIZE : 256K;
+__ram_size = DEFINED(__RAM_SIZE) ? __RAM_SIZE : 64K;
+__stack_size = DEFINED(__STACK_SIZE) ? __STACK_SIZE : 2048;
+
+
 ENTRY( _start )
-
-__stack_size = 2048;
-
 PROVIDE( _stack_size = __stack_size );
 
 
@@ -23,8 +25,8 @@ MEMORY
    FLASH-256K + RAM-64K  
    FLASH-288K + RAM-32K  
 */
-	FLASH (rx) : ORIGIN = 0x00000000, LENGTH = 256K
-	RAM (xrw) : ORIGIN = 0x20000000, LENGTH = 64K
+	FLASH (rx) : ORIGIN = 0x00000000, LENGTH = __flash_size
+	RAM (xrw) : ORIGIN = 0x20000000, LENGTH = __ram_size
 }
 
 
